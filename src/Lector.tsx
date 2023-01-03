@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import QrScanner from "qr-scanner";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+// import IconButton from "@mui/material/IconButton";
+// import CloseIcon from "@mui/icons-material/Close";
 
 type Props = {
   onScan: (scannedInfo: string) => void;
@@ -53,14 +53,14 @@ const Lector: FC<Props> = ({ onScan, onClose }) => {
       <section className="flex items-center justify-center max-h-80vh overflow-y-hidden">
         <video className="w-full" ref={video} />
       </section>
-      <IconButton
+      <button
         color="warning"
         className="!absolute top-2 right-2"
         aria-label="close"
         onClick={onClose}
       >
-        <CloseIcon />
-      </IconButton>
+        {/* <CloseIcon /> */}
+      </button>
       <h6>{data}</h6>
     </section>
   );

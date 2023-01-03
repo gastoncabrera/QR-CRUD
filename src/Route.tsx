@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 // import QRScanner from "@components/shared/QRScanner";
 import Lector from "./Lector";
 import App from "./App";
-import { display } from "@mui/system";
+// import { display } from "@mui/system";
 
 const Scanner = () => {
   const scanned = useRef<string>();
@@ -27,9 +27,9 @@ const Scanner = () => {
       <article className="content">
         <section className="flex items-center justify-between">
           <h3>QR code scanner</h3>
-          <Button variant="contained" onClick={openScanner}>
+          <button onClick={openScanner}>
             Open scanner
-          </Button>
+          </button>
         </section>
         <br />
         {scanned.current && (
