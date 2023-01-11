@@ -9,14 +9,5 @@ import Route from "./Route"
 import './index.css'
 
 
-// ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-//   <React.StrictMode>
-//     {/* <App /> */}
-//     {/* <Lector /> */}
-//     <Route/>
-//   </React.StrictMode>,
-// )
-
-
 const root = document.getElementById("root");
 render(<Route />, root);

@@ -6,6 +6,7 @@ import App from "./App";
 // import { display } from "@mui/system";
 
 const Scanner = () => {
+   const [open, setOpen] = useState(false);
   const scanned = useRef<string>();
   const [isScannerOpen, setIsScannerOpen] = useState(false);
 
@@ -24,7 +25,7 @@ const Scanner = () => {
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-      <article className="content">
+      {/* <article className="content">
         <section className="flex items-center justify-between">
           <h3>QR code scanner</h3>
           <button onClick={openScanner}>
@@ -38,9 +39,11 @@ const Scanner = () => {
             <p>{scanned.current}</p>
           </section>
         )}
-        {isScannerOpen && <Lector onClose={closeScanner} onScan={onScan} />}
+        {isScannerOpen && 
+        }
       </article>
-      <App />
+      <App /> */}
+        <Lector onClose={closeScanner} onScan={onScan} />
     </div>
   );
 };

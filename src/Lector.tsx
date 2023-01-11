@@ -14,8 +14,8 @@ const Lector: FC<Props> = ({ onScan, onClose }) => {
   const qrScanner = useRef<QrScanner>();
   const video = useRef<HTMLVideoElement>(null);
 
-  function onClick(){
-    
+  function onClick() {
+
   }
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Lector: FC<Props> = ({ onScan, onClose }) => {
           video.current,
           (result) =>
             onScan(result.data)
-            // setData(result.data)
+          // setData(result.data)
           ,
           {
             highlightScanRegion: true,
@@ -49,20 +49,20 @@ const Lector: FC<Props> = ({ onScan, onClose }) => {
   }, []);
 
   return (
-    <section className="fixed inset-0 z-1200 flex items-center justify-center bg-black">
-      <section className="flex items-center justify-center max-h-80vh overflow-y-hidden">
-        <video className="w-full" ref={video} />
-      </section>
-      <button
-        color="warning"
-        className="!absolute top-2 right-2"
-        aria-label="close"
-        onClick={onClose}
-      >
-        {/* <CloseIcon /> */}
-      </button>
-      <h6>{data}</h6>
-    </section>
+    <video className="w-full" style={{ width: '100%', height: '100%' }} ref={video} />
+    // <section className="fixed inset-0 z-1200 flex items-center justify-center bg-black">
+    //   <section className="flex items-center justify-center max-h-80vh overflow-y-hidden">
+    //   </section>
+    //   <button
+    //     color="warning"
+    //     className="!absolute top-2 right-2"
+    //     aria-label="close"
+    //     onClick={onClose}
+    //   >
+    //     {/* <CloseIcon /> */}
+    //   </button>
+    //   <h6>{data}</h6>
+    // </section>
   );
 };
 

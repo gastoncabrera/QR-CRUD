@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Qr Genereate</h1>
+      {/* <h1 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Qr Genereate</h1>
       <form onSubmit={onSubmit}>
         <div>
           <input
@@ -63,16 +63,16 @@ function App() {
 
           <button type='submit'>Login</button>
         </div>
-      </form>
+      </form> */}
       {/* <button onClick={() => Click}>QRGen</button> */}
-      <div>
+      {/* <div>
         {
           imgQR ?
             <img src={imgQR} alt="" /> :
             <div></div>
         }
         {imgQR && <a href={imgQR} download="qr.png">Descargar QR</a>}
-      </div>
+      </div> */}
     </div >
   )
 }
